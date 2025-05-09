@@ -24,5 +24,6 @@ export const crearUsuarioControlador = async (req:Request,res:Response) => {
     }
     catch(error){
         res.status(500).json({error: 'Error al crear el usuario.'});
+        console.log(error)
     }
 }
