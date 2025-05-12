@@ -1,13 +1,13 @@
-import { crearUsuarioControlador, } from "./crearUsuario.controller";
+import { crearUsuario, } from "./crearUsuario.controller";
 import { traerUsuarioPorId } from "./traerUsuario.controller";
-import { traerTodosUsuarios } from "./traerTodosLosUsuarios.controller";
+import { traerTodosLosUsuarios } from "./traerTodosLosUsuarios.controller";
 import { eliminarUsuarioPorId } from "./eliminarUsuario.controller";
 import { modificarUsuarioPorId } from "./modificarUsuario.controller";
 
 export {
-    crearUsuarioControlador,
+    crearUsuario,
     traerUsuarioPorId,
-    traerTodosUsuarios,
+    traerTodosLosUsuarios,
     eliminarUsuarioPorId,
     modificarUsuarioPorId,
 }

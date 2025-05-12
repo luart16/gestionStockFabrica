@@ -7,3 +7,7 @@ const esquemaProducto = new Schema({
     descripcion: { type: String},
     precio: { type: Number},
 })
+
+const Producto = model('Producto', esquemaProducto);
+
+export default Producto;

@@ -7,3 +7,7 @@ const esquemaMaterial = new Schema({
     unidadDeMedida: { type: String},
     precio: { type: Number},
 })
+
+const Material = model('Material', esquemaMaterial);
+
+export default Material;
