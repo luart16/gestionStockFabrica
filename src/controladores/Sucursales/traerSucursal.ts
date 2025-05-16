@@ -16,8 +16,8 @@ export const traerSucursalPorId = async (req: Request, res: Response) => {
             telefono: sucursal.telefono,
         })
     }
-    catch (error){
-        res.status(500).json({error: 'Error al traer sucursal por id'})
+    catch (error) {
+        res.status(500).json({ error: 'Error al traer sucursal por id' })
         console.log(error)
     }
 }

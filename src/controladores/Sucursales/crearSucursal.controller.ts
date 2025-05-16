@@ -8,20 +8,20 @@ interface DatosSucursales {
 }
 
 //función principal del controlador:
-export const crearSucursal = async (req: Request, res:Response) => {
-    try{
+export const crearSucursal = async (req: Request, res: Response) => {
+    try {
         const { nombreSucursal, direccion, telefono } = req.body as DatosSucursales;
         //creo una nueva sucursal y la guardo en la DB con .save:
-        const nuevaSucursal = new Sucursal ({
+        const nuevaSucursal = new Sucursal({
             nombreSucursal,
             direccion,
             telefono,
         })
         await nuevaSucursal.save();// aquí guardo la nueva
-        res.status(201).json({message: 'Sucursal creada exitosamente.'});
+        res.status(201).json({ message: 'Sucursal creada exitosamente.' });
     }
-    catch(error){
-        res.status(500).json({error: 'Error al crear la sucursal.'});
+    catch (error) {
+        res.status(500).json({ error: 'Error al crear la sucursal.' });
         console.log(error);
     }
 }

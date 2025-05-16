@@ -20,9 +20,9 @@ export const modificarUsuarioPorId = async (req: Request, res: Response) => {
         if (email) {
             usuario.email = email;
         }
-        if (contrasenia){
+        if (contrasenia) {
             usuario.contrasenia = await bcrypt.hash(contrasenia, 10);
-        }if (rol) {
+        } if (rol) {
             usuario.rol = rol;
         }
 
@@ -31,7 +31,7 @@ export const modificarUsuarioPorId = async (req: Request, res: Response) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ error: 'Error al modificar los datos.'});
+        res.status(500).json({ error: 'Error al modificar los datos.' });
 
     }
 }

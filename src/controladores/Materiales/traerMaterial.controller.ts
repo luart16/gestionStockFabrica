@@ -18,8 +18,8 @@ export const traerMaterialPorId = async (req: Request, res: Response) => {
             precio: material.precio,
         })
     }
-    catch (error){
-        res.status(500).json({error: 'Error al traer material por id'})
+    catch (error) {
+        res.status(500).json({ error: 'Error al traer material por id' })
         console.log(error)
     }
 }

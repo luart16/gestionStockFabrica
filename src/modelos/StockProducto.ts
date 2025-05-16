@@ -12,7 +12,12 @@ const esquemaStockProducto = new Schema({
         ref: 'Sucursal',
         required: true,
     },
-    cantidad: {type: Number},
+    cantidad: { 
+        type: Number,
+        required: true,
+        min: 0 //puede ser 0 si no hay stock
+     },
+    enStock: { type: Boolean },
 })
 
 const StockProducto = model('StockProducto', esquemaStockProducto);

@@ -19,13 +19,13 @@ export const modificarMaterialPorId = async (req: Request, res: Response) => {
         if (color) {
             material.color = color;
         }
-        if (descripcion){
+        if (descripcion) {
             material.descripcion = descripcion;
         }
         if (unidadDeMedida) {
             material.unidadDeMedida = unidadDeMedida;
         }
-        if (precio){
+        if (precio) {
             material.precio = precio;
         }
 
@@ -34,7 +34,7 @@ export const modificarMaterialPorId = async (req: Request, res: Response) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ error: 'Error al modificar los datos.'});
+        res.status(500).json({ error: 'Error al modificar los datos.' });
 
     }
 }

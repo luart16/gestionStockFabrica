@@ -19,16 +19,16 @@ export const modificarSucursalPorId = async (req: Request, res: Response) => {
         if (direccion) {
             sucursal.direccion = direccion;
         }
-        if (telefono){
+        if (telefono) {
             sucursal.telefono = telefono;
         }
-        
+
         const sucursalModificada = await sucursal.save();
         res.status(200).json(sucursalModificada);
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ error: 'Error al modificar la sucursal.'});
+        res.status(500).json({ error: 'Error al modificar la sucursal.' });
 
     }
 }

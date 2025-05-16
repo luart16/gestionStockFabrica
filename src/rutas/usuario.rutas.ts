@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { crearUsuario,traerUsuarioPorId, traerTodosLosUsuarios, eliminarUsuarioPorId, modificarUsuarioPorId } from "../controladores/Usuarios";
+import { crearUsuario, traerUsuarioPorId, traerTodosLosUsuarios, eliminarUsuarioPorId, modificarUsuarioPorId } from "../controladores/Usuarios";
 const usuarioRuta = Router();
 
 usuarioRuta.post('/api/usuario/crear', crearUsuario); //creo una ruta, que es la que me va a dirigir a crear un usuario.

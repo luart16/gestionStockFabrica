@@ -8,9 +8,9 @@ export const traerTodosLosMateriales = async (req: Request, res: Response) => {
             res.status(404).json({ error: 'No hay materiales registrados' });
             return;
         }
-          const todosLosMateriales = materiales.map(material => ({
+        const todosLosMateriales = materiales.map(material => ({
             _id: material._id,
-            nombreMaterial:material.nombreMaterial,
+            nombreMaterial: material.nombreMaterial,
             color: material.color,
             descripcion: material.descripcion,
             unidadDeMedida: material.unidadDeMedida,
@@ -19,8 +19,8 @@ export const traerTodosLosMateriales = async (req: Request, res: Response) => {
         }));
         res.status(200).json(todosLosMateriales);
     }
-    catch (error){
-        res.status(500).json({error: 'Error al traer los materiales.'})
+    catch (error) {
+        res.status(500).json({ error: 'Error al traer los materiales.' })
         console.log(error)
     }
 }

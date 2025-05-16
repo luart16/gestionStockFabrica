@@ -11,8 +11,8 @@ export const eliminarUsuarioPorId = async (req: Request, res: Response) => {
         }
         res.status(200).json('Usuario eliminado correctamente')
     }
-    catch (error){
-        res.status(500).json({error: 'Error al eliminar usuario'})
+    catch (error) {
+        res.status(500).json({ error: 'Error al eliminar usuario' })
         console.log(error)
     }
 }

@@ -4,7 +4,7 @@ import { traerMaterialPorId } from "./traerMaterial.controller";
 import { traerTodosLosMateriales } from "./traerTodosLosMateriales.controller";
 import { modificarMaterialPorId } from "./modificarMaterial.controller";
 
-export{
+export {
     crearMaterial,
     eliminarMaterialPorId,
     traerMaterialPorId,

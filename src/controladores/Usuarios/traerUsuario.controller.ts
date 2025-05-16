@@ -17,8 +17,8 @@ export const traerUsuarioPorId = async (req: Request, res: Response) => {
             rol: usuario.rol,
         })
     }
-    catch (error){
-        res.status(500).json({error: 'Error al traer usuario por id'})
+    catch (error) {
+        res.status(500).json({ error: 'Error al traer usuario por id' })
         console.log(error)
     }
 }

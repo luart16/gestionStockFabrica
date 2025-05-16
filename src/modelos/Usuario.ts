@@ -4,11 +4,11 @@ import { model, Schema } from 'mongoose' //1°: importo de mongoose las herramie
    -model: crea el modelo a partir del esquema, y es lo que se usa para leer, escribir, eliminar o actualizar datos. */
 
 //2°:Creo el esquema del usuario: (Es como decir: "cada usuario que se guarde en la base de datos debe tener estas características obligatorias.")
-   const esquemaUsuario = new Schema({
-    nombreUsuario: { type: String, required: true, unique: true},
-    email: { type: String, required: true, unique: true},
-    contrasenia: { type: String, required: true },
-    rol: { type: String, required: true, enum: ['administrador', 'vendedor'] }
+const esquemaUsuario = new Schema({
+   nombreUsuario: { type: String, required: true, unique: true },
+   email: { type: String, required: true, unique: true },
+   contrasenia: { type: String, required: true },
+   rol: { type: String, required: true, enum: ['administrador', 'vendedor'] }
 });
 
 //3°: Creo el modelo Mongoose llamado 'Usuario', basado en el esquema que definí arriba:

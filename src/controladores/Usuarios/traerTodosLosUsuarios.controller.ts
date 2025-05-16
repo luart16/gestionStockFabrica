@@ -8,17 +8,17 @@ export const traerTodosLosUsuarios = async (req: Request, res: Response) => {
             res.status(404).json({ error: 'No hay usuarios registrados' });
             return;
         }
-          const todosLosUsuarios = usuarios.map(usuario => ({
+        const todosLosUsuarios = usuarios.map(usuario => ({
             _id: usuario._id,
-            nombreUsuario:usuario.nombreUsuario,
+            nombreUsuario: usuario.nombreUsuario,
             contrasenia: usuario.contrasenia,
             email: usuario.email,
-            rol:usuario.rol
+            rol: usuario.rol
         }));
         res.status(200).json(todosLosUsuarios);
     }
-    catch (error){
-        res.status(500).json({error: 'Error al traer los usuarios'})
+    catch (error) {
+        res.status(500).json({ error: 'Error al traer los usuarios' })
         console.log(error)
     }
 }
