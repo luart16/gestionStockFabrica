@@ -1,4 +1,3 @@
-import { error } from "console";
 import Producto from "../../modelos/Producto";
 import { Response, Request } from "express";
 
